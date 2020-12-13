@@ -372,6 +372,14 @@ if (is_singular('blog')) { ?>
   body {
     --max-width: 800px;
   }
+  .content > h2, .entry-content > h3, .entry-content > h4  {
+    margin-bottom: 0;
+  }
+  .content p {
+    line-height: 1.9rem;
+    padding-top: 8px;
+    margin-bottom: 24px; 
+  }
   .footer-entry {
     font-family: var(--font-family-ubuntu);
   }
@@ -381,6 +389,9 @@ if (is_singular('blog')) { ?>
     border-radius: 3px;
     font-size: 15px;
     width: 100%;
+  }
+  @media (max-width: 768px) {
+    .content p {font-size: 15px; line-height: 1.65rem;}
   }
 <?php } ?>
 </style>
